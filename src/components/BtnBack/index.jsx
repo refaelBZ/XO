@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
+import { IoArrowUndoOutline } from "react-icons/io5";
 
 export default function BtnBack({
-  content = "תוכן ",
   className = "save",
   onClick = () => {},
   onsubmit = () => {},
@@ -9,7 +9,7 @@ export default function BtnBack({
 }) {
   return (
     <button className={styles.btn} onClick={onClick} {...attr}>
-      {content}
+      <IoArrowUndoOutline className={styles.icon} size="100" color="#fbb500" />
     </button>
   );
 }
