@@ -1,12 +1,11 @@
 import './App.css'
 import Test from './test';
-function App() {
+export default function App() {
 
   return (
     <>
-      <Test />
+<Test />
     </>
   )
 }
 
-export default App;
