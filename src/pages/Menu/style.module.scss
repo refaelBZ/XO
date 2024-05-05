@@ -1,21 +1,15 @@
 @import '../../../vars';
-
-
+@import '../../../extends.scss'; // התאמה לנתיב הפרויקט שלך
 
 .page {
-  background-color: $primary-color;
-  height: $page-height;
-  width: $page-width;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 10px;
-
+  @extend %pageContainerBase;
+  
   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    
     img {
       width: 70%;
       padding: 20px;
@@ -23,3 +17,4 @@
     }
   }
 }
+

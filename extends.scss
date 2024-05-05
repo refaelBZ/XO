@@ -1,0 +1,17 @@
+@import './vars';
+
+%pageContainerBase {
+  background-color: $primary-color;
+  height: $page-height;
+  width: $page-width;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family;
+  -webkit-text-stroke: 1px black;
+
+  }
+  
