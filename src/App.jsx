@@ -1,11 +1,8 @@
-import './App.css'
+import "./App.css";
+import Kobi from "./test/Kobi";
 
 function App() {
-
-  return (
-    <>
-    </>
-  )
+  return <Kobi />;
 }
 
-export default App
+export default App;
