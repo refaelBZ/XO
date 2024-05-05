@@ -1,4 +1,5 @@
 .btn {
+  padding: 10px;
   background-color: #fcd015;
   width: 213.74px;
   height: 179.77px;
@@ -12,4 +13,7 @@
   box-shadow: -10px 10px #fbb500;
   -webkit-box-shadow: 0px 20px 0px 0px #fbb500;
   -moz-box-shadow: 0px 20px 0px 0px #fbb500;
+}
+.icon {
+  background-color: #ffffff;
 }
