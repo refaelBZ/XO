@@ -1,0 +1,29 @@
+@import '../../../vars';
+
+@mixin button-style($base-color, $shadow-color) {
+  background: linear-gradient(to bottom, $shadow-color, $base-color);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 10px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 5px $shadow-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px $shadow-color;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px $shadow-color;
+  }
+}
+
+// Specific style for the "Play" button
+.play {
+  @include button-style($button-color, $button-color-shadow);
+}
+
