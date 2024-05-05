@@ -1,0 +1,15 @@
+.btn {
+  background-color: #fcd015;
+  width: 213.74px;
+  height: 179.77px;
+  top: 79px;
+  left: 74px;
+  gap: 0px;
+  border-radius: 30px;
+  border-color: #ffffff;
+  border: 0px 1px 2px 1px;
+  opacity: 0px;
+  box-shadow: -10px 10px #fbb500;
+  -webkit-box-shadow: 0px 20px 0px 0px #fbb500;
+  -moz-box-shadow: 0px 20px 0px 0px #fbb500;
+}

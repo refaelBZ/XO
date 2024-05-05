@@ -1,11 +1,11 @@
 import './App.css'
-import Menu from "./pages/Menu"
 function App() {
 
   return (
     <>
-<Menu/>    </>
+      {/* <Test /> */}
+    </>
   )
 }
 
-export default App
+export default App;

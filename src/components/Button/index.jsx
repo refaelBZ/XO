@@ -1,7 +1,7 @@
 import React from 'react';
 import  styles from './style.module.scss';
 
-function index({content="Play", onClick}) {
+function Button({content="Play", onClick}) {
   return (
     <div onClick={onClick} >
       <button className={styles.play}>{content}</button>
@@ -9,4 +9,5 @@ function index({content="Play", onClick}) {
   );
 }
 
-export default index;
+export default Button;
+
