@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #3d7ad6;
+    --button-color: #fcd015;
+    --button-color-dark: #e6b814; // צבע כהה יותר
+    --button-color-shadow: #cc9f12; // צבע נוסף כהה
+}
+
+$primary-color: var(--primary-color);
+$button-color: var(--button-color);
+$button-color-dark: var(--button-color-dark);
+$button-color-shadow: var(--button-color-shadow);

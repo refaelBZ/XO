@@ -1,19 +1,10 @@
 import './App.css'
-import WhiteBoard from './components/WhiteBoard'
-
+import Menu from "./pages/Menu"
 function App() {
 
   return (
-    <div className='app'>
-      <>
-
-      <WhiteBoard>
-dsnknskcn
-      </WhiteBoard>
-        
-      </>
-    </div>
-
+    <>
+<Menu/>    </>
   )
 }
 
