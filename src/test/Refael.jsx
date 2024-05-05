@@ -1,12 +1,11 @@
-import BtnBack from "../components/BtnBack";
 import Button from "../components/Button";
 
-export default function Kobi() {
+export default function Refael() {
   return (
     <div>
        <h2>Welcome to Kobi's Component</h2>
 
-      <BtnBack />
+      <Button />
     </div>
   );
 }
