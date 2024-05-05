@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import { IoArrowUndoOutline } from "react-icons/io5";
+import { TbArrowBackUp } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 
 export default function BtnBack() {
@@ -7,7 +7,8 @@ export default function BtnBack() {
 
   return (
     <button className={styles.btn} onClick={() => navigate(-1)}>
-      <IoArrowUndoOutline className={styles.icon} size="100" color="#fbb500" />
+      <TbArrowBackUp className={styles.icon} size="100%"/>
+
     </button>
   );
 }

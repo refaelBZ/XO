@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Kobi from "./Kobi"
+
 import Ronini from './Ronini';
 
 // Components for each participant

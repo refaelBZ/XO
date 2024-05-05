@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style.module.scss';
 import Button from '../../components/Button';
-export default function index() {
+export default function Menu() {
   return (
     <div className={styles.page}>
       <div className={styles.logo}>

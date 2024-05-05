@@ -10,7 +10,9 @@
   font-weight: bold;
   box-shadow: 0 5px $shadow-color;
   transition: all 0.3s ease;
+  -webkit-text-stroke: 1px rgb(135, 99, 0);
 
+font-family: inherit;
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px $shadow-color;
@@ -20,10 +22,25 @@
     transform: translateY(2px);
     box-shadow: 0 3px $shadow-color;
   }
+
+
+
+  
 }
 
 // Specific style for the "Play" button
 .play {
   @include button-style($button-color, $button-color-shadow);
 }
+
+// .gradient {
+//   background: linear-gradient(
+//     to bottom,
+//     #fcd015 50%,
+//     #FBB500 50%
+//   );
+//   width: 300px; // ודא שיש גודל מוגדר
+//   height: 200px;
+//   border: solid 10px #fcd015;
+// }
 
