@@ -5,7 +5,7 @@ export default function Ronini() {
   return (
     <div>
       <h2>Welcome to Ronini's Component</h2>
-      {/* <YellowElement/>  */}
+      <YellowElement />
     </div>
   );
 }
