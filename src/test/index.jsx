@@ -2,12 +2,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Kobi from "./Kobi"
-
+import Refael from './Refael';
 import Ronini from './Ronini';
 
 // Components for each participant
 // const Ronini = () => <h2>Welcome to Ronini's Component</h2>;
-const Refael = () => <h2>Welcome to Refael's Component</h2>;
 
 const Test = () => {
     return (
