@@ -1,11 +1,15 @@
-import Button from "../components/Button";
+import React from 'react';
+import Button from '../components/Button';
+import styles from './style.module.scss';
+import Menu from '../pages/Menu';
+import Join from '../pages/Join';
 
 export default function Refael() {
   return (
-    <div>
-       <h2>Welcome to Kobi's Component</h2>
-
-      <Button />
+    <div className={styles.dashboard}>
+      <h2>Welcome to Refael's Component</h2>
+      <Menu />
+      <Join/>
     </div>
   );
 }
