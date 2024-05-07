@@ -1,5 +1,11 @@
-.body {
-  /* background-color: black; */
-  /* color: black;
-  display: flex; */
+.cell img{
+  width: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oIcon {
+  width: 100%; 
+  height: auto; 
 }

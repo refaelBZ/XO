@@ -4,6 +4,12 @@
   background-color: #fcd015;
   position: relative;
 
+  .title{
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
   &:after {
     content: "";
     position: absolute;
