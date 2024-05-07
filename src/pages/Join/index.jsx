@@ -6,20 +6,20 @@ import BtnBack from '../../components/BtnBack';
 export default function Join() {
   return (
     <div className={styles.page}>
-       
-       <div className={styles.back}>
-       <BtnBack/>
-       </div>
-        <div className={styles.title}>
+
+      <div className={styles.back}>
+        <BtnBack />
+      </div>
+      <div className={styles.title}>
         Join a game
-        </div>
-<WhiteBoard>
-<input type="text"placeholder='Enter code game' /></WhiteBoard>
-        <Button content="Join"/>
-        <div className={styles.title}>
+      </div>
+      <WhiteBoard>
+        <input type="text" placeholder='Enter code game' /></WhiteBoard>
+      <Button content="Join" />
+      <div className={styles.title}>
         -OR-
-        </div>
-        <Button content="Create a game"/>
+      </div>
+      <Button content="Create a game" />
 
     </div>
   )

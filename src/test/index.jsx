@@ -5,9 +5,6 @@ import Kobi from "./Kobi"
 import Refael from './Refael';
 import Ronini from './Ronini';
 
-// Components for each participant
-// const Ronini = () => <h2>Welcome to Ronini's Component</h2>;
-
 const Test = () => {
     return (
         <Router>
