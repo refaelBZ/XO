@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  .blueSquare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #c9f9fc;
+    box-shadow: -2px 2px 0px 1px rgba(0, 0, 0, 1);
+
+    .value{
+      width: 90%;
+      height: 90%;
+      div{
+        
+        img{
+          width:90%;
+        }
+      }
+    }
+  }
+
+  .blueSquare:hover {
+    cursor: pointer;
+  }
+}
