@@ -1,26 +1,21 @@
-import { RotatingLines } from "react-loader-spinner";
 import X from "../components/X";
+import Loader from "../components/Loader";
 import O from "../components/O";
 import { useState } from "react";
+import Game_board from "../components/GameBoard";
 
 export default function Kobi() {
-  const [board, setBoard] = useState[([0, 0, 0], [0, 0, 0], [0, 0, 0])];
+  const [board, setBoard] = useState([
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+  ]);
   const [player, setPlayer] = useState("X");
   return (
     <div>
       <h2>Welcome to Kobi's Component</h2>
-      <RotatingLines
-        strokeColor="yellow"
-        visible={true}
-        height="96"
-        width="96"
-        color="grey"
-        strokeWidth="8"
-        animationDuration="3"
-        ariaLabel="rotating-lines-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-      />
+      {/* <Loader /> */}
+      <Game_board />
       <O />
       <X />
     </div>

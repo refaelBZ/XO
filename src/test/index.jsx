@@ -1,13 +1,10 @@
 // TestComponent.jsx
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Kobi from "./Kobi";
-import Refael from "./Refael";
-import Ronini from "./Ronini";
+import { Link } from "react-router-dom";
 
 const Test = () => {
   return (
-    <Router>
+    <div>
       <nav>
         <ul>
           <li>
@@ -21,13 +18,11 @@ const Test = () => {
           </li>
         </ul>
       </nav>
-
+      {/* 
       <Routes>
-        <Route path="/kobi" element={<Kobi />} />
-        <Route path="/ronini" element={<Ronini />} />
-        <Route path="/refael" element={<Refael />} />
-      </Routes>
-    </Router>
+        
+      </Routes> */}
+    </div>
   );
 };
 
