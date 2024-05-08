@@ -1,5 +1,3 @@
-// TestComponent.jsx
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Test = () => {
@@ -18,10 +16,6 @@ const Test = () => {
           </li>
         </ul>
       </nav>
-      {/* 
-      <Routes>
-        
-      </Routes> */}
     </div>
   );
 };
