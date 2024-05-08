@@ -5,12 +5,11 @@ import YellowElement from "../components/YellowElement";
 export default function Ronini() {
   return (
     <div>
-       <h2>Welcome to Ronini's Component</h2>
-       {/* <YellowElement/>  */}
-       <Game_board/>
-       
+      <h2>Welcome to Ronini's Component</h2>
+      {/* <YellowElement /> */}
+      {/* <Game_board/> */}
 
-</div>
-);
+
+    </div>
+  );
 }
-
