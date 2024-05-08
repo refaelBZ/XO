@@ -5,7 +5,7 @@ export default function YellowElement() {
   return (
     <div className={styles.container}>
       <div className={styles.element}>
-      YellowElement</div>
+      </div>
     </div>
   )
 }
