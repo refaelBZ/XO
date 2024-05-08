@@ -41,6 +41,9 @@ export default function ChoosePlayer() {
           </div>
         </div>
       </WhiteBoard>
+      <WhiteBoard>
+        <input type="text" placeholder="Choose your name" />
+      </WhiteBoard>
       {player ? <Button content="LETS PLAY" onClick={handleNav} /> : null}
     </div>
   );
