@@ -1,9 +1,9 @@
 import styles from "./style.module.css";
 
-export default function X() {
+export default function O() {
   return (
-    <div className={styles.body}>
-      <img src="../../../O.svg" />
+    <div className={styles.cell}>
+      <img src="../../../O.svg" className={styles.oIcon} alt="O" />
     </div>
   );
 }

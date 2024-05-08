@@ -1,5 +1,25 @@
-.body {
-  /* background-color: black; */
-  /* color: black;
-  display: flex; */
+@keyframes growAndShrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
+
+.cell img {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: growAndShrink 0.3s ease;
+}
+
+.oIcon {
+  width: 100%;
+  height: auto;
+}
+

@@ -11,6 +11,8 @@ import Board from "./pages/Board";
 import ChoosePlayer from "./pages/ChoosePlayer";
 import Waiting from "./pages/Waiting";
 
+import Layout from "./Layout";
+
 export default function App() {
   return (
     <main>
@@ -27,6 +29,7 @@ export default function App() {
       </Routes>
 
       <Test />
+      <Layout />
     </main>
   );
 }

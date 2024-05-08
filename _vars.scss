@@ -4,7 +4,7 @@
     --primary-color: #3d7ad6;
     --button-color: #fcd015;
     --button-color-dark: #e6b814; // צבע כהה יותר
-    --button-color-shadow: #cc9f12; // צבע נוסף כהה
+    --button-color-shadow: #e3aa00; // צבע נוסף כהה
     --font-family: 'Luckiest Guy', sans-serif; // הגדרת הפונט
 }
 
@@ -12,6 +12,6 @@ $primary-color: var(--primary-color);
 $button-color: var(--button-color);
 $button-color-dark: var(--button-color-dark);
 $button-color-shadow: var(--button-color-shadow);
-$page-height: 75vh;
-$page-width: 20vw;
+$page-height: 600px;
+$page-width: 300px;
 $font-family: var(--font-family); // שמירת הפונט כמשתנה

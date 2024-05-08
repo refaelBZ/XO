@@ -5,12 +5,14 @@
   border: none;
   border-radius: 50px;
   color: white;
-  padding: 10px 30px;
+  padding: 20px 30px;
   font-size: 1.2em;
   font-weight: bold;
   box-shadow: 0 5px $shadow-color;
   transition: all 0.3s ease;
+  border-bottom: 1.5px solid white;
   -webkit-text-stroke: 1px rgb(135, 99, 0);
+  min-width: 250px;
 
 font-family: inherit;
   &:hover {
