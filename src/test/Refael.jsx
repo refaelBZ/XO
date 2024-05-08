@@ -3,6 +3,9 @@ import Button from '../components/Button';
 import styles from './style.module.scss';
 import Menu from '../pages/Menu';
 import Join from '../pages/Join';
+import Waiting from '../pages/Waiting';
+import BoardWithPlayers from '../pages/BoardWithPlayers';
+import ChoosePlayer from '../pages/ChoosePlayer';
 
 export default function Refael() {
   return (
@@ -10,6 +13,8 @@ export default function Refael() {
       <h2>Welcome to Refael's Component</h2>
       <Menu />
       <Join/>
-    </div>
+      <Waiting/>
+      <BoardWithPlayers/>
+<ChoosePlayer/>    </div>
   );
 }

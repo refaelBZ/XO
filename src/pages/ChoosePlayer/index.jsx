@@ -1,21 +1,13 @@
 import React from 'react'
 import styles from './style.module.scss';
 import Button from '../../components/Button';
-import WhiteBoard from '../../components/WhiteBoard';
-import BtnBack from '../../components/BtnBack';
 import { useNavigate } from 'react-router-dom';
+import BtnBack from '../../components/BtnBack';
+import WhiteBoard from '../../components/WhiteBoard';
+import X from '../../components/X';
+import O from '../../components/O';
 
-export default function Join() {
-
-
-
-  const navigate = useNavigate();
-
-  const handleNav = (e) => {
-      navigate('/waiting');
-  }
-
-
+export default function ChoosePlayer() {
   return (
     <div className={styles.page}>
 
@@ -23,16 +15,19 @@ export default function Join() {
         <BtnBack />
       </div>
       <div className={styles.title}>
-        Join a game
+        Choose player
       </div>
       <WhiteBoard>
-        <input type="text" placeholder='Enter code game' /></WhiteBoard>
+        <div className={styles.choose}>
+
+        <X/><O/>
+        </div>
+        </WhiteBoard>
       <Button content="Join" />
       <div className={styles.title}>
         -OR-
       </div>
-      <Button onClick={handleNav} content="Create a game" />
+      <Button  content="Create a game" />
 
-    </div>
-  )
+    </div>  )
 }

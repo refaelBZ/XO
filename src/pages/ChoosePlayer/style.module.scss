@@ -1,0 +1,23 @@
+@import '../../../vars';
+@import '../../../extends.scss'; // התאמה לנתיב הפרויקט שלך
+
+.page {
+  @extend %pageContainerBase;
+  .title{
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+  }
+  .back{
+    height: 50px;
+    display: flex;
+  }
+
+  .choose{
+    height: 200px;
+    width: 400px;
+    display: flex;
+  flex-direction: row;  }
+
+}
+
