@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './style.module.scss'
 import Blue_Square from '../Blue_square/index'
 import WhiteBoard from '../WhiteBoard';
+import { WiDirectionDown } from 'react-icons/wi';
 
-export default function Game_board({setWinner}) {
+export default function Game_board({ setWinner, winner }) {
 
 
     const isWin = (boardArr) => {
@@ -60,7 +61,7 @@ export default function Game_board({setWinner}) {
         }
 
         // No winner found
-        return null;
+        return;
     };
 
 
@@ -74,16 +75,26 @@ export default function Game_board({setWinner}) {
 
     const [board, setBoard] = useState(list)
     const [player, setPlayer] = useState("X")
+    const [counter, setCounter] = useState(0);
 
 
     const handleClick = (rowIndex, squareIndex) => {
+        if (board[rowIndex][squareIndex] !== " ") return; // אם המשחק נגמר או שהתא כבר נלחץ
+        if (winner || counter == 9) return;
+
         const newBoard = [...board]
-        if (board[rowIndex][squareIndex] !== " ") return null
         newBoard[rowIndex][squareIndex] = player
         setBoard(newBoard)
-        setPlayer(player === "X" ? "O" : "X")
-        // console.log(player);
-        setWinner (isWin(newBoard)) ;
+        const win = isWin(newBoard) && false
+        setWinner(win);
+        if (!win) {
+            setPlayer(player === "X" ? "O" : "X")
+            setCounter(counter + 1)
+        }
+
+        console.log(winner);
+
+
     };
     return (
         <div >

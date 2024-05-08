@@ -4,7 +4,7 @@ import Button from '../../components/Button';
 import { useNavigate } from 'react-router-dom';
 import BtnBack from '../../components/BtnBack';
 import WhiteBoard from '../../components/WhiteBoard';
-import X from '../../components/O';
+import X from '../../components/X';
 import O from '../../components/O';
 
 export default function ChoosePlayer() {
