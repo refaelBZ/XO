@@ -22,7 +22,7 @@ export default function BoardWithPlayers() {
             </div>
             <div className={styles.subPage}>
                 <div className={styles.board}>
-                    <Game_board setWinner={setWinner} />
+                    <Game_board setWinner={setWinner} winner={winner}/>
                 </div>
                 <Button content="Back" />
             </div>
