@@ -85,9 +85,12 @@ export default function Game_board({ setWinner, winner }) {
         const newBoard = [...board]
         newBoard[rowIndex][squareIndex] = player
         setBoard(newBoard)
+        setPlayer(player === "X" ? "O" : "X")
+
         const win = isWin(newBoard) && false
         setWinner(win);
         if (!win) {
+            console.log(win);
             setPlayer(player === "X" ? "O" : "X")
             setCounter(counter + 1)
         }

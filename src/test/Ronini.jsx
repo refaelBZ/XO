@@ -6,8 +6,8 @@ export default function Ronini() {
   return (
     <div>
        <h2>Welcome to Ronini's Component</h2>
-       <YellowElement/> 
-       {/* <Game_board/> */}
+       {/* <YellowElement/>  */}
+       <Game_board/>
        
 
 </div>
