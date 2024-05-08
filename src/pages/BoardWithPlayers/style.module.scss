@@ -3,6 +3,7 @@
 
 .page {
   @extend %pageContainerBase;
+  z-index: 2;
   .title{
     color: white;
     font-weight: 900;
