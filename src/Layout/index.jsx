@@ -5,7 +5,6 @@ import Welcome from "../pages/Welcome";
 import Kobi from "../test/Kobi";
 import Ronini from "../test/Ronini";
 import Refael from "../test/Refael";
-import Board from "../pages/Board";
 import ChoosePlayer from "../pages/ChoosePlayer";
 import Waiting from "../pages/Waiting";
 import BoardWithPlayers from "../pages/BoardWithPlayers";
