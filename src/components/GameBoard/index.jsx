@@ -7,62 +7,70 @@ import { WiDirectionDown } from 'react-icons/wi';
 export default function Game_board({ setWinner, winner }) {
 
 
-    const isWin = (boardArr) => {
+    const isWin = (boardArr, player) => {
         const size = boardArr.length;
-
+    
         // Rows
         for (let i = 0; i < size; i++) {
-            const firstCell = boardArr[i][0];
-            if (firstCell && boardArr[i].every(cell => cell === firstCell)) {
-                return firstCell;
-            }
-        }
-
-        // Columns
-        for (let j = 0; j < size; j++) {
-            const firstCell = boardArr[0][j];
             let allMatch = true;
-
-            for (let k = 0; k < size; k++) {
-                if (boardArr[k][j] !== firstCell) {
+            for (let j = 0; j < size; j++) {
+                if (player && boardArr[j][i] !== player) {
                     allMatch = false;
                     break;
                 }
             }
-            if (allMatch && firstCell) {
-                return firstCell;
+            if (allMatch && player) {
+                console.log("Row Winner", player);
+                return player;
             }
         }
-
+    
+        // Columns
+        for (let j = 0; j < size; j++) {
+            let allMatch = true;
+    
+            for (let k = 0; k < size; k++) {
+                if (boardArr[j][k] !== player) {
+                    allMatch = false;
+                    break;
+                }
+            }
+            if (allMatch && player) {
+                console.log("Col Winner", player);
+                return player;
+            }
+        }
+    
         // First Diagonal (top-left to bottom-right)
-        const firstDiagonalCell = boardArr[0][0];
         let diagonalMatch = true;
-        for (let i = 1; i < size; i++) {
-            if (boardArr[i][i] !== firstDiagonalCell) {
+        for (let i = 0; i < size; i++) {
+            if (boardArr[i][i] !== player) {
                 diagonalMatch = false;
                 break;
             }
         }
-        if (diagonalMatch && firstDiagonalCell) {
-            return firstDiagonalCell;
+        if (diagonalMatch && player) {
+            console.log("First DIag Winner", player);
+            return player;
         }
-
+    
         // Second Diagonal (top-right to bottom-left)
-        const firstReverseDiagonalCell = boardArr[0][size - 1];
         diagonalMatch = true;
-        for (let i = 1; i < size; i++) {
-            if (boardArr[i][size - 1 - i] !== firstReverseDiagonalCell) {
+        for (let i = 0; i < size; i++) {
+            if (boardArr[i][size - 1 - i] !== player) {
                 diagonalMatch = false;
                 break;
             }
         }
-        if (diagonalMatch && firstReverseDiagonalCell) {
-            return firstReverseDiagonalCell;
+        if (diagonalMatch && player) {
+            console.log("Second Diag Winner", player);
+            return player;
         }
-
+    
         // No winner found
         return;
     };
+    
 
 
 
@@ -79,20 +87,19 @@ export default function Game_board({ setWinner, winner }) {
 
 
     const handleClick = (rowIndex, squareIndex) => {
-        if (board[rowIndex][squareIndex] !== " ") return; // אם המשחק נגמר או שהתא כבר נלחץ
+        if (board[rowIndex][squareIndex] !== " ") return;
         if (winner || counter == 9) return;
 
         const newBoard = [...board]
         newBoard[rowIndex][squareIndex] = player
         setBoard(newBoard)
-        const win = isWin(newBoard) && false
+        const win = isWin(newBoard, player)
         setWinner(win);
         if (!win) {
             setPlayer(player === "X" ? "O" : "X")
             setCounter(counter + 1)
         }
-
-        console.log(winner);
+        console.log(win);
 
 
     };
