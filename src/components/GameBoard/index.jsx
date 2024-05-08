@@ -104,8 +104,8 @@ export default function Game_board({ setWinner, winner }) {
 
 
   return (
-    <div>
-      <WhiteBoard>
+    <div className={styles.squares}>
+      <WhiteBoard className={styles.test}>
         {board.map((r, rowIndex) => (
           <div key={rowIndex} className={styles.row}>
             {r.map((s, squareIndex) => (
