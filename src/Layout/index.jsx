@@ -1,4 +1,4 @@
-import { Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Join from "../pages/Join";
 import Menu from "../pages/Menu";
 import Welcome from "../pages/Welcome";
@@ -13,6 +13,7 @@ export default function Layout() {
   return (
     <Routes>
       <Route path="/" element={<Welcome />} />
+      <Route path="/welcome" element={<Welcome />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/waiting" element={<Waiting />} />
       <Route path="/join" element={<Join />} />
