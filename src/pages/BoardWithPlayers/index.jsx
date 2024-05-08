@@ -5,6 +5,7 @@ import WhiteBoard from '../../components/WhiteBoard';
 import BtnBack from '../../components/BtnBack';
 import YellowElement from '../../components/YellowElement';
 import Game_board from '../../components/GameBoard';
+import Avatar from '../../components/Avatar';
 export default function BoardWithPlayers() {
 
 
@@ -16,9 +17,14 @@ export default function BoardWithPlayers() {
 
             <div className={styles.yellowElement}>
                 <YellowElement winner={winner} />
+                {winner?"":        <div className={styles.avatarContaier}>
+                <Avatar />
+                <Avatar />
+                </div>}
+        
             </div>
             <div className={styles.board}>
-                <Game_board setWinner={setWinner} winner={winner} />
+                <Game_board setWinner={setWinner} />
 
             </div>            <Button content="Back" />
 

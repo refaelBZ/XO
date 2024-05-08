@@ -1,0 +1,42 @@
+.avatar{
+
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+.pic{
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid #8eebff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .wins{
+    width: 80px;
+  background-color: black;
+  height: 30px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  text-align: center;
+
+  .cell img{
+    width:20px;
+    position: absolute;
+left: -10px;
+  }
+  }
+}
+
+
+.name{
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+}
+}

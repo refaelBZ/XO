@@ -1,11 +1,24 @@
-.cell img{
-  width: 100px; 
+@keyframes growAndShrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* גדילה */
+  }
+  100% {
+    transform: scale(1); /* חזרה לגודל המקורי */
+  }
+}
+
+.cell img {
+  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: growAndShrink 0.3s ease;
 }
 
 .xIcon {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
