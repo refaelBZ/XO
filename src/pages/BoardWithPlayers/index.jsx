@@ -9,23 +9,25 @@ import Avatar from "../../components/Avatar";
 export default function BoardWithPlayers() {
   const [winner, setWinner] = useState(false);
 
-  return (
-    <div className={styles.page}>
-      <div className={styles.yellowElement}>
-        <YellowElement winner={winner} />
-        {winner ? (
-          ""
-        ) : (
-          <div className={styles.avatarContaier}>
-            <Avatar />
-            <Avatar />
-          </div>
-        )}
-      </div>
-      <div className={styles.board}>
-        <Game_board setWinner={setWinner} winner={winner}  />
-      </div>{" "}
-      <Button content="Back" />
-    </div>
-  );
+    return (
+        <div className={styles.page}>
+
+
+            <div className={styles.yellowElement}>
+                <YellowElement winner={winner} />
+                {winner ? "" : <div className={styles.avatarContaier}>
+                    <Avatar />
+                    <Avatar />
+                </div>}
+            </div>
+            <div className={styles.subPage}>
+                <div className={styles.board}>
+                    <Game_board setWinner={setWinner} winner={winner}/>
+                </div>
+                <Button content="Back" />
+            </div>
+
+
+        </div>
+    )
 }

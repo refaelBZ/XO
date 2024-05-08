@@ -9,13 +9,13 @@
     font-size: 30px;
     text-align: center;
   }
-  .codeTitle{
-    color: white;
-    font-weight: 600;
-    font-size: 20px;
+  .subtitle {
+    @extend %subtitle;
     position: absolute;
-    top: -10px;
-    display: flex;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%); /* מחזיר את האלמנט למרכז */
+    white-space: nowrap; /* מונע חלוקת שורות */
 
   }
   .back{

@@ -1,7 +1,7 @@
 import { RotatingLines } from "react-loader-spinner";
 import styles from "./style.module.css";
 
-function loader() {
+function Loader() {
   return (
     <div>
       {" "}
@@ -21,4 +21,4 @@ function loader() {
   );
 }
 
-export default loader;
+export default Loader;
