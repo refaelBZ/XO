@@ -1,7 +1,8 @@
 @import '../../../vars';
-@import '../../../extends.scss'; // התאמה לנתיב הפרויקט שלך
+@import '../../../extends.scss';
 
 .page {
+  padding: 0;
   @extend %pageContainerBase;
   z-index: 2;
   .title{
@@ -9,12 +10,17 @@
     font-weight: 900;
     font-size: 30px;
     text-align: center;
+    .subPage{
+      @extend %pageContainerBase;
+gap: 50px;
+      padding: 10px;
+    }
   }
 
-// .board{
-//     width: 100%;
-//     aspect-ratio: 1/1;
-// }
+.board{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
 
   .yellowElement{
     width: 100%;
@@ -28,4 +34,3 @@
     }
   }
 }
-

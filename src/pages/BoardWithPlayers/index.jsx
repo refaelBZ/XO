@@ -17,16 +17,19 @@ export default function BoardWithPlayers() {
 
             <div className={styles.yellowElement}>
                 <YellowElement winner={winner} />
-                {winner?"":        <div className={styles.avatarContaier}>
-                <Avatar />
-                <Avatar />
+                {winner ? "" : <div className={styles.avatarContaier}>
+                    <Avatar />
+                    <Avatar />
                 </div>}
-        
             </div>
-            <div className={styles.board}>
-                <Game_board setWinner={setWinner} />
+            <div className={styles.subPage}>
+                <div className={styles.board}>
+                    <Game_board setWinner={setWinner} />
+                </div>
 
-            </div>            <Button content="Back" />
+                <Button content="Back" />
+            </div>
+
 
         </div>
     )

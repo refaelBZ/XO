@@ -20,6 +20,9 @@ export default function Menu() {
       <div className={styles.logo}>
         <img src="https://i.imgur.com/iYGPVCu.png" />
       </div>
+      <div>
+        
+      </div>
       <div className={styles.buttons}>
         <Button onClick={handleNav} content="Play Solo"/>
         <Button content="Play with a friend"/>
