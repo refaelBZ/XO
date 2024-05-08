@@ -14,18 +14,24 @@ export default function Waiting() {
             <div className={styles.back}>
                 <BtnBack />
             </div>
+            <div className={styles.boardContainer}>
 
-            <div className={styles.board}>
-                <div className={styles.subtitle}>
-                    Your Code
+                <div className={styles.board}>
+                    <div className={styles.subtitle}>
+                        Your Code
+                    </div>
+                    <WhiteBoard>
+                        0548104804
+                    </WhiteBoard>
                 </div>
-                <WhiteBoard>
-                    0548104804
-                </WhiteBoard>
             </div>
-<Loader/>
+            <div className={styles.loader}>
+            <Loader height={60} width={60} />
+            </div>
+            <div>
             <div className={styles.title}>
                 waiting for opponent
+            </div>
             </div>
         </div>
     )

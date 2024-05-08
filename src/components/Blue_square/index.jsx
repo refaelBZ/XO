@@ -12,8 +12,6 @@ export default function Blue_Square({ value, onClick }) {
                 <div className={styles.value}>
                 {value === "X" ? <X /> :value==="O"? <O/>:" "}
                 </div>
-
-
             </div>
         </div>
     )

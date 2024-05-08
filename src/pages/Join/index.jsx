@@ -19,7 +19,7 @@ export default function Join() {
   return (
     <div className={styles.page}>
 
-      <div className={styles.up}>
+      <div className={styles.top}>
         <div className={styles.back}>
           <BtnBack />
         </div>
@@ -27,13 +27,14 @@ export default function Join() {
           Join a game
         </div>
       </div>
-      <div>
-      <WhiteBoard>
+
+      <div className={styles.inputContainer}>
+      <div className={styles.input}>
+<WhiteBoard>
         <input type="text" placeholder='Enter code game' />
       </WhiteBoard>
+</div>
       </div>
-
-
       <div className={styles.buttons}>
         <Button content="Join" />
         <div className={styles.title}>
