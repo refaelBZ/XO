@@ -2,9 +2,22 @@ import React, { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 import Blue_Square from "../Blue_square/index";
 import WhiteBoard from "../WhiteBoard";
-import { WiDirectionDown } from "react-icons/wi";
 
 export default function Game_board({ setWinner, winner }) {
+  const list = [
+    [" ", " ", " "],
+    [" ", " ", " "],
+    [" ", " ", " "],
+  ];
+
+  const [board, setBoard] = useState(list);
+  const [player, setPlayer] = useState("X");
+  const [counter, setCounter] = useState(0);
+  const isFive  = counter > 3
+  const isFull  = counter === 8
+
+
+  // פונקציית בדיקת ניצחון 
   const isWin = (boardArr, player) => {
     const size = boardArr.length;
 
@@ -69,31 +82,27 @@ export default function Game_board({ setWinner, winner }) {
     return;
   };
 
-  const list = [
-    [" ", " ", " "],
-    [" ", " ", " "],
-    [" ", " ", " "],
-  ];
-
-  const [board, setBoard] = useState(list);
-  const [player, setPlayer] = useState("X");
-  const [counter, setCounter] = useState(0);
-
   const handleClick = (rowIndex, squareIndex) => {
+    if (winner) return;
     if (board[rowIndex][squareIndex] !== " ") return;
-    if (winner || counter == 9) return;
-
+    
+    
     const newBoard = [...board];
     newBoard[rowIndex][squareIndex] = player;
     setBoard(newBoard);
-    const win = isWin(newBoard, player);
+    const win = isFive ?  isWin(newBoard, player) : false;
     setWinner(win);
+    if (isFull && !win) setWinner("l")  
     if (!win) {
       setPlayer(player === "X" ? "O" : "X");
       setCounter(counter + 1);
     }
     console.log(win);
   };
+
+
+
+
   return (
     <div>
       <WhiteBoard>

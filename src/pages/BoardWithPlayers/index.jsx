@@ -7,7 +7,7 @@ import YellowElement from "../../components/YellowElement";
 import Game_board from "../../components/GameBoard";
 import Avatar from "../../components/Avatar";
 export default function BoardWithPlayers() {
-  const [winner, setWinner] = useState(null);
+  const [winner, setWinner] = useState(false);
 
   return (
     <div className={styles.page}>
@@ -23,7 +23,7 @@ export default function BoardWithPlayers() {
         )}
       </div>
       <div className={styles.board}>
-        <Game_board setWinner={setWinner} />
+        <Game_board setWinner={setWinner} winner={winner}  />
       </div>{" "}
       <Button content="Back" />
     </div>
