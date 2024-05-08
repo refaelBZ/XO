@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
-import styles from './style.module.scss';
-import Button from '../../components/Button';
-import WhiteBoard from '../../components/WhiteBoard';
-import BtnBack from '../../components/BtnBack';
-import YellowElement from '../../components/YellowElement';
-import Game_board from '../../components/GameBoard';
-import Avatar from '../../components/Avatar';
+import React, { useState } from "react";
+import styles from "./style.module.scss";
+import Button from "../../components/Button";
+import WhiteBoard from "../../components/WhiteBoard";
+import BtnBack from "../../components/BtnBack";
+import YellowElement from "../../components/YellowElement";
+import Game_board from "../../components/GameBoard";
+import Avatar from "../../components/Avatar";
 export default function BoardWithPlayers() {
-
-
-    const [winner, setWinner] = useState(null);
+  const [winner, setWinner] = useState(null);
 
     return (
         <div className={styles.page}>
@@ -26,7 +24,6 @@ export default function BoardWithPlayers() {
                 <div className={styles.board}>
                     <Game_board setWinner={setWinner} />
                 </div>
-
                 <Button content="Back" />
             </div>
 

@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import Button from '../../components/Button';
 import WhiteBoard from '../../components/WhiteBoard';
 import BtnBack from '../../components/BtnBack';
-import Loader from '../../components/Load';
+import Loader from '../../components/Loader';
 export default function Waiting() {
 
 
@@ -23,8 +23,7 @@ export default function Waiting() {
                     0548104804
                 </WhiteBoard>
             </div>
-
-            <Loader />
+<Loader/>
             <div className={styles.title}>
                 waiting for opponent
             </div>

@@ -1,19 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Join from '../pages/Join';
-import Waiting from '../pages/Waiting';
-import BoardWithPlayers from '../pages/BoardWithPlayers';
-import Menu from '../pages/Menu';
+import { Route, Routes } from "react-router-dom";
+import Join from "../pages/Join";
+import Menu from "../pages/Menu";
+import Welcome from "../pages/Welcome";
+import Kobi from "../test/Kobi";
+import Ronini from "../test/Ronini";
+import Refael from "../test/Refael";
+import ChoosePlayer from "../pages/ChoosePlayer";
+import Waiting from "../pages/Waiting";
+import BoardWithPlayers from "../pages/BoardWithPlayers";
 
 export default function Layout() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Menu />} />
-                <Route path="/joingame" element={<Join />} />
-                <Route path="/waiting" element={<Waiting />} />
-                <Route path="/boardwithplayers" element={<BoardWithPlayers />} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<Welcome />} />
+      <Route path="/welcome" element={<Welcome />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/waiting" element={<Waiting />} />
+      <Route path="/join" element={<Join />} />
+      <Route path="/board" element={<BoardWithPlayers />} />
+      <Route path="/choose" element={<ChoosePlayer />} />
+      <Route path="/kobi" element={<Kobi />} />
+      <Route path="/ronini" element={<Ronini />} />
+      <Route path="/refael" element={<Refael />} />
+    </Routes>
+  );
 }
