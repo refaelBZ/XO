@@ -26,12 +26,16 @@ export default function Join() {
         Join a game
       </div>
       <WhiteBoard>
-        <input type="text" placeholder='Enter code game' /></WhiteBoard>
+        <input type="text" placeholder='Enter code game' />
+        </WhiteBoard>
+        <div className={styles.buttons}>
+
       <Button content="Join" />
       <div className={styles.title}>
         -OR-
       </div>
       <Button onClick={handleNav} content="Create a game" />
+        </div>
 
     </div>
   )

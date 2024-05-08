@@ -18,6 +18,14 @@
 
   .yellowElement{
     width: 100%;
+    position: relative;
+    .avatarContaier{
+      position: absolute;
+      bottom: -50%;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
   }
 }
 
