@@ -6,10 +6,12 @@
   --button-color-dark: #e6b814; // צבע כהה יותר
   --button-color-shadow: #e3aa00; // צבע נוסף כהה
   --font-family: 'Luckiest Guy', sans-serif; // הגדרת הפונט
-  
+  --text-stroke-width: 5px; // עובי קו מסגרת לטקסט
+  --text-stroke-color: black; // צבע קו המסגרת  
+
   /* Title & Subtitle variables */
   --title-color: #ffffff; // צבע הכותרת
-  --title-font-size: 50px; // גודל גופן לכותרת
+  --title-font-size: 40px; // גודל גופן לכותרת
   --subtitle-color: #ffffff; // צבע כותרת משנה
   --subtitle-font-size: 30px; // גודל גופן לכותרת משנה
   --text-align: center;
@@ -23,6 +25,8 @@ $button-color-shadow: var(--button-color-shadow);
 $page-height: 600px;
 $page-width: 300px;
 $font-family: var(--font-family);
+$text-stroke-width: var(--text-stroke-width);
+$text-stroke-color: var(--text-stroke-color);
 
 /* משתני כותרות */
 $title-color: var(--title-color);

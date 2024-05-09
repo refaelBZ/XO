@@ -1,32 +1,43 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Button from "../../components/Button";
-import WhiteBoard from "../../components/WhiteBoard";
-import BtnBack from "../../components/BtnBack";
 import YellowElement from "../../components/YellowElement";
-import Game_board from "../../components/GameBoard";
+import GameBoard from "../../components/GameBoard";
 import Avatar from "../../components/Avatar";
+import { useGameStore } from '../../store';
+
 export default function BoardWithPlayers() {
+
   const [winner, setWinner] = useState(false);
-
-    return (
-        <div className={styles.page}>
-
-            <div className={styles.yellowElement}>
-                <YellowElement winner={winner} />
-                {winner ? "" : <div className={styles.avatarContaier}>
-                    <Avatar />
-                    <Avatar />
-                </div>}
-            </div>
-                <div className={styles.board}>
-                    <Game_board setWinner={setWinner} winner={winner}/>
-                </div>
-                <div className={styles.buttons}>
-                <Button content="Back" />
-                </div>
+  const mySign = useGameStore((state) => state.mySymbol);
+  const opponentSign = useGameStore((state) => state.opponentSymbol);
+  const currentPlayer = useGameStore((state) => state.currentPlayer);
+  const winnerName = useGameStore((state) => state.winnerName);
+  const myName = useGameStore((state) => state.myName);
+  const opponentName = useGameStore((state) => state.opponentName);
 
 
-        </div>
-    )
+  return (
+    <div className={styles.page}>
+      <div className={styles.yellowElement}>
+      <YellowElement {...(winner && { winner: winnerName })} />
+      {!winner && (
+          <div className={styles.avatarContainer}>
+            <Avatar sign={mySign} active={currentPlayer === mySign} name={myName} />
+            <Avatar sign={opponentSign} active={currentPlayer === opponentSign} name={opponentName} />
+          </div>
+        )}
+      </div>
+      
+      <div className={styles.board}>
+        <GameBoard setWinner={setWinner} winner={winner} />
+      </div>
+
+      <div className={styles.buttons}>
+        <Button content="Back" onClick={() => {}} />
+      </div>
+
+      
+    </div>
+  );
 }

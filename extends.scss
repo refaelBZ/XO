@@ -9,12 +9,9 @@
   gap: 30px;
   padding: 20px;
   padding-bottom: 60px;
-
   // justify-content: space-around;
   // align-items: center;
   font-family: $font-family;
-  -webkit-text-stroke: 1px black;
-
   &>div:nth-child(2) {
     flex-grow: 1;
   }
@@ -32,6 +29,8 @@
   font-family: $font-family;
   text-align: $text-align;
   font-weight: $font-weight;
+  -webkit-text-stroke: $text-stroke-width $text-stroke-color;
+  paint-order: stroke fill;
 }
 
 %title {
