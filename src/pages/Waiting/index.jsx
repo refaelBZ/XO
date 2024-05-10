@@ -23,7 +23,7 @@ export default function Waiting() {
                     0548104804
                 </WhiteBoard>
             </div>
-<Loader/>
+{/* <Loader/> */}
             <div className={styles.title}>
                 waiting for opponent
             </div>
