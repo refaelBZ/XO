@@ -1,14 +1,14 @@
-import React from 'react'
-import styles from './style.module.scss'
+import React from "react";
+import styles from "./style.module.scss";
 
-export default function YellowElement({winner=""}) {
+export default function YellowElement({ winner }) {
   return (
     <div className={styles.container}>
       <div className={styles.element}>
-      <div className={styles.title}>
-      {winner ? `${winner}` : ""}
-      </div>
+        <div className={styles.title}>
+          {winner ? `${winner} WIN!` : ""}
+        </div>
       </div>
     </div>
-  )
+  );
 }

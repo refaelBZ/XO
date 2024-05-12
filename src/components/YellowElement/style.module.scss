@@ -1,13 +1,14 @@
+@import '../../../vars';
+@import '../../../extends.scss';
+
 .container {
-  min-width: 180px;
-  min-height: 80px;
+  min-height: 100px;
   background-color: #fcd015;
   position: relative;
 
   .title{
-    color: white;
-    font-weight: 600;
-    font-size: 40px;
+    @extend %title;
+
   }
 
   &:after {

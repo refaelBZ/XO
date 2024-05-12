@@ -1,15 +1,14 @@
 import { RotatingLines } from "react-loader-spinner";
 import styles from "./style.module.css";
 
-function loader() {
+function Loader({ height = 100, width = 100 }) {
   return (
     <div>
-      {" "}
       <RotatingLines
-        strokeColor="yellow"
+        strokeColor="#fcd015"
         visible={true}
-        height="96"
-        width="96"
+        height={height}
+        width={width}
         color="grey"
         strokeWidth="8"
         animationDuration="3"
@@ -21,4 +20,4 @@ function loader() {
   );
 }
 
-export default loader;
+export default Loader;

@@ -1,35 +1,48 @@
 @import '../../../vars';
-@import '../../../extends.scss'; // התאמה לנתיב הפרויקט שלך
+@import '../../../extends.scss';
 
 .page {
   @extend %pageContainerBase;
-  .title{
-    color: white;
-    font-weight: 900;
-    font-size: 30px;
-    text-align: center;
-  }
-  .codeTitle{
-    color: white;
-    font-weight: 600;
-    font-size: 20px;
-    position: absolute;
-    top: -10px;
-    display: flex;
+
+  .title {
+    @extend %subtitle;
 
   }
-  .back{
+
+  .subtitle {
+    @extend %subtitle;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .back {
     height: 50px;
     display: flex;
   }
 
-  .board{
-    height: 100px;
+  .boardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .board {
+    height: 80px;
     width: 100%;
     font-size: 30px;
     color: gray;
     position: relative;
-    
+  }
+
+  .loader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
-

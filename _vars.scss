@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 :root {
-    --primary-color: #3d7ad6;
-    --button-color: #fcd015;
-    --button-color-dark: #e6b814; // צבע כהה יותר
-    --button-color-shadow: #e3aa00; // צבע נוסף כהה
-    --font-family: 'Luckiest Guy', sans-serif; // הגדרת הפונט
+  --primary-color: #3d7ad6;
+  --button-color: #fcd015;
+  --button-color-dark: #e6b814; // צבע כהה יותר
+  --button-color-shadow: #e3aa00; // צבע נוסף כהה
+  --font-family: 'Luckiest Guy', sans-serif; // הגדרת הפונט
+  --text-stroke-width: 5px; // עובי קו מסגרת לטקסט
+  --text-stroke-color: black; // צבע קו המסגרת  
+
+  /* Title & Subtitle variables */
+  --title-color: #ffffff; // צבע הכותרת
+  --title-font-size: 40px; // גודל גופן לכותרת
+  --subtitle-color: #ffffff; // צבע כותרת משנה
+  --subtitle-font-size: 30px; // גודל גופן לכותרת משנה
+  --text-align: center;
+  --font-weight: 600;
 }
 
 $primary-color: var(--primary-color);
@@ -14,4 +24,14 @@ $button-color-dark: var(--button-color-dark);
 $button-color-shadow: var(--button-color-shadow);
 $page-height: 600px;
 $page-width: 300px;
-$font-family: var(--font-family); // שמירת הפונט כמשתנה
+$font-family: var(--font-family);
+$text-stroke-width: var(--text-stroke-width);
+$text-stroke-color: var(--text-stroke-color);
+
+/* משתני כותרות */
+$title-color: var(--title-color);
+$title-font-size: var(--title-font-size);
+$subtitle-color: var(--subtitle-color);
+$subtitle-font-size: var(--subtitle-font-size);
+$text-align: var(--text-align);
+$font-weight: var(--font-weight);

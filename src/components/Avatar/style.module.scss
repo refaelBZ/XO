@@ -1,11 +1,12 @@
-.avatar{
+@import '../../../vars';
+@import '../../../extends.scss';
 
+.avatar{
 display: flex;
 flex-direction: column;
 gap: 20px;
 
 .pic{
-  width: 100px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
@@ -14,29 +15,102 @@ gap: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .wins{
-    width: 80px;
+  min-width: 60px;
   background-color: black;
-  height: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 14px;
   color: white;
   position: absolute;
   bottom: -20px;
   text-align: center;
 
+
+
   .cell img{
-    width:20px;
+    width:25px;
     position: absolute;
-left: -10px;
+    left: -10px;
+    bottom: 0;
+    
   }
+  }
+  img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit:cover;
   }
 }
 
 
 .name{
+  @extend %subtitle;
   color: white;
   font-weight: 900;
-  font-size: 30px;
   text-align: center;
 }
 }
+
+
+
+
+.avatar{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100px;
+  
+  .pic{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid #8eebff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .wins{
+    min-width: 60px;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+  
+  
+  
+    .cell img{
+      width:25px;
+      position: absolute;
+      left: -10px;
+      bottom: 0;
+      
+    }
+    }
+    img{
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      object-fit:cover;
+    }
+  }
+  
+  
+  .name{
+    @extend %subtitle;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+  }
+  }
