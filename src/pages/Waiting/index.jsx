@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 import Button from "../../components/Button";
 import WhiteBoard from "../../components/WhiteBoard";
-import LittleBtn from "../../components/LittleBtn";
+import BtnBack from "../../components/BtnBack";
 import Loader from "../../components/Loader";
 import { useLocation, useNavigate } from "react-router-dom";
 import { io } from "socket.io-client";
+import { useStore } from "zustand";
 
 // יצירת חיבור באמצעות `io` עם כתובת השרת שלך
 const socket = io("http://localhost:4000");
@@ -14,6 +15,7 @@ export default function Waiting() {
   const navigate = useNavigate();
   const location = useLocation(); // קבלת ה-state מהניווט
   const [roomCode, setRoomCode] = useState(location.state?.roomCode || "");
+  // const { roomCode, setRoomCode } = useStore();
 
   useEffect(() => {
     // האזנה לאירוע של התחלת המשחק

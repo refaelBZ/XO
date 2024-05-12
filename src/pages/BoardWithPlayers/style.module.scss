@@ -1,22 +1,24 @@
-@import '../../../vars';
-@import '../../../extends.scss';
+@import "../../../vars";
+@import "../../../extends.scss";
 
 .page {
   padding: 0;
   @extend %pageContainerBase;
   z-index: 2;
+  // TODO
+  // height: auto;
+  // overflow-x: hidden;
+  // overflow-y: auto;
 
-
-    .subPage {
-      @extend %pageContainerBase;
-      gap: 50px;
-      padding: 10px;
-      padding-bottom: 60px;
-      background-color: none;
-
-    }
   
-
+  .subPage {
+    @extend %pageContainerBase;
+    gap: 50px;
+    padding: 10px;
+    padding-bottom: 60px;
+    background-color: none;
+  }
+  
   .board {
     width: 100%; /* מתאים את הלוח לרוחב האב */
     padding: 20px;
@@ -27,7 +29,6 @@
     // gap: 20px;
   }
   
-
   .yellowElement {
     margin-top: 40px;
     width: 100%;
@@ -43,11 +44,10 @@
       gap: 10px;
     }
   }
-  .buttons{
+  .buttons {
     padding-bottom: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
   }
 }

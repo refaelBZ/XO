@@ -44,7 +44,10 @@ export default function Join() {
         <div className={styles.input}>
           <WhiteBoard>
             <input
+            <input
               type="text"
+              id="numberInput"
+              maxLength="6"
               placeholder="Enter game code"
               value={roomCode}
               onChange={(e) => setRoomCode(e.target.value)}

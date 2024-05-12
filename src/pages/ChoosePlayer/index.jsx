@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import styles from "./style.module.scss";
-import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import LittleBtn from "../../components/LittleBtn";
 import WhiteBoard from "../../components/WhiteBoard";
@@ -9,6 +6,10 @@ import { useGameStore } from "../../store";
 
 export default function ChoosePlayer() {
   const navigate = useNavigate();
+  const setPlayer = useGameStore((state) => state.setPlayer);
+  const setCurrentPlayer = useGameStore((state) => state.setCurrentPlayer);
+  const player = useGameStore((state) => state.player);
+
   const setPlayerSymbols = useGameStore((state) => state.setPlayerSymbols);
   const setPlayerNames = useGameStore((state) => state.setPlayerNames); // שליפת פונקציית עדכון שמות מה-store
   const myName = useGameStore((state) => state.myName); // שליפת השם הנוכחי מה-store
@@ -18,8 +19,11 @@ export default function ChoosePlayer() {
 
   const chooseClick = (value) => {
     setPlayer(value);
+    setCurrentPlayer(value);
     setPlayerSymbols(value);
   };
+
+  console.log({ player });
 
   const handleNav = () => {
     if (player) {
