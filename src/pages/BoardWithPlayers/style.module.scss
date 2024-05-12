@@ -1,36 +1,53 @@
-@import '../../../vars';
-@import '../../../extends.scss';
+@import "../../../vars";
+@import "../../../extends.scss";
 
 .page {
   padding: 0;
   @extend %pageContainerBase;
   z-index: 2;
-  .title{
-    color: white;
-    font-weight: 900;
-    font-size: 30px;
-    text-align: center;
-    .subPage{
-      @extend %pageContainerBase;
-gap: 50px;
-      padding: 10px;
-    }
+  // TODO
+  // height: auto;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+
+  
+  .subPage {
+    @extend %pageContainerBase;
+    gap: 50px;
+    padding: 10px;
+    padding-bottom: 60px;
+    background-color: none;
   }
-
-.board{
-    width: 100%;
-    aspect-ratio: 1/1;
-}
-
-  .yellowElement{
+  
+  .board {
+    width: 100%; /* מתאים את הלוח לרוחב האב */
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto; /* ממרכז את הלוח */
+    // display: flex;
+    // flex-direction: column;
+    // gap: 20px;
+  }
+  
+  .yellowElement {
+    margin-top: 40px;
     width: 100%;
     position: relative;
-    .avatarContaier{
+
+    .avatarContainer {
       position: absolute;
-      bottom: -50%;
+      top: -40%;
+      left: 50%; /* ממרכז לרוחב */
+      transform: translateX(-50%); /* מחזיר לאמצע */
       display: flex;
       flex-direction: row;
       gap: 10px;
     }
+  }
+  .buttons {
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
