@@ -1,9 +1,9 @@
-import BtnBack from "../../components/BtnBack";
+import LittleBtn from "../../components/LittleBtn";
 
 export default function Board() {
   return (
     <div>
-      <BtnBack />
+      <LittleBtn />
     </div>
   );
 }

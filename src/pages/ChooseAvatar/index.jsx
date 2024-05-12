@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import LittleBtn from "../../components/LittleBtn";
 import WhiteBoard from "../../components/WhiteBoard";
-import Blue_Square from "../../components/Blue_square";
+import Avatar from "../../components/Avatar";
 import { useGameStore } from "../../store";
 
 export default function ChoosePlayer() {
@@ -34,24 +34,9 @@ export default function ChoosePlayer() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.top}>
-        <div className={styles.back}>
-          <LittleBtn />
-        </div>
-        <div className={styles.title}>Choose player</div>
+      <div className={styles.logo}>
+        <img src="https://i.imgur.com/iYGPVCu.png" />
       </div>
-
-      <WhiteBoard>
-        <div className={styles.choose}>
-          <div className={player === "O" ? styles.gray : styles.choose}>
-            <Blue_Square value="X" onClick={() => chooseClick("X")} />
-          </div>
-          <div className={player === "X" ? styles.gray : styles.choose}>
-            <Blue_Square value="O" onClick={() => chooseClick("O")} />
-          </div>
-        </div>
-      </WhiteBoard>
-
       <div className={styles.inputContainer}>
         <div className={styles.input}>
           <WhiteBoard>
@@ -63,6 +48,18 @@ export default function ChoosePlayer() {
             />
           </WhiteBoard>
         </div>
+      </div>{" "}
+      <div className={styles.top}>
+        <div className={styles.title}>CHOOSE AVATAR</div>
+      </div>
+      <div className={styles.avatars}>
+        <Avatar sign="girl" />
+        <Avatar />
+        <Avatar sign="girl" />
+      </div>
+      <div className={styles.back}>
+        <LittleBtn type="back" />
+        <LittleBtn type="V" />
       </div>
       <div>{player && <Button content="LETS PLAY" onClick={handleNav} />}</div>
     </div>

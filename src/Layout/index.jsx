@@ -8,6 +8,7 @@ import Refael from "../test/Refael";
 import ChoosePlayer from "../pages/ChoosePlayer";
 import Waiting from "../pages/Waiting";
 import BoardWithPlayers from "../pages/BoardWithPlayers";
+import ChooseAvatar from "../pages/ChooseAvatar";
 
 export default function Layout() {
   return (
@@ -19,6 +20,7 @@ export default function Layout() {
       <Route path="/join" element={<Join />} />
       <Route path="/board" element={<BoardWithPlayers />} />
       <Route path="/choose" element={<ChoosePlayer />} />
+      <Route path="/setting" element={<ChooseAvatar />} />
       <Route path="/kobi" element={<Kobi />} />
       <Route path="/ronini" element={<Ronini />} />
       <Route path="/refael" element={<Refael />} />

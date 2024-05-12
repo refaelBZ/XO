@@ -1,5 +1,5 @@
-@import '../../../vars';
-@import '../../../extends.scss'; // עדכון נתיב הפרויקט בהתאם
+@import "../../../vars";
+@import "../../../extends.scss"; // עדכון נתיב הפרויקט בהתאם
 
 .page {
   @extend %pageContainerBase;
@@ -16,7 +16,11 @@
       filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
     }
   }
-
+  .back {
+    height: 10%;
+    display: flex;
+    align-self: flex-start; /* החזרה תופיע בצד שמאל */
+  }
   .buttons {
     display: flex;
     flex-direction: column;
