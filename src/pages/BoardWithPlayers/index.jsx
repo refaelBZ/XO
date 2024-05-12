@@ -8,7 +8,8 @@ import { useGameStore } from '../../store';
 
 export default function BoardWithPlayers() {
 
-  const [winner, setWinner] = useState(false);
+  const winner = useGameStore((state) => state.winner);
+  const setWinner = useGameStore((state) => state.setWinner);
   const mySign = useGameStore((state) => state.mySymbol);
   const opponentSign = useGameStore((state) => state.opponentSymbol);
   const currentPlayer = useGameStore((state) => state.currentPlayer);
@@ -20,24 +21,24 @@ export default function BoardWithPlayers() {
   return (
     <div className={styles.page}>
       <div className={styles.yellowElement}>
-      <YellowElement {...(winner && { winner: winnerName })} />
-      {!winner && (
+        <YellowElement {...(winner && { winner: winnerName })} />
+        {!winner && (
           <div className={styles.avatarContainer}>
             <Avatar sign={mySign} active={currentPlayer === mySign} name={myName} />
             <Avatar sign={opponentSign} active={currentPlayer === opponentSign} name={opponentName} />
           </div>
         )}
       </div>
-      
+
       <div className={styles.board}>
-        <GameBoard setWinner={setWinner} winner={winner} />
+        <GameBoard />
       </div>
 
       <div className={styles.buttons}>
-        <Button content="Back" onClick={() => {}} />
+        <Button content="Back" onClick={() => { }} />
       </div>
 
-      
+
     </div>
   );
 }
