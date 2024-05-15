@@ -1,0 +1,7 @@
+@import '../../../vars';
+@import '../../../extends.scss';
+
+.page {
+  @extend %pageContainerBase;
+
+}
