@@ -1,6 +1,7 @@
 import Button from "../components/Button";
 import Game_board from "../components/GameBoard";
 import YellowElement from "../components/YellowElement";
+import AgainstComputer from "../pages/AgainstComputer";
 
 export default function Ronini() {
   return (
@@ -9,6 +10,7 @@ export default function Ronini() {
       {/* <YellowElement /> */}
       {/* <Game_board/> */}
 
+{<AgainstComputer/>}
 
     </div>
   );

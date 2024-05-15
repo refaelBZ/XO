@@ -13,13 +13,15 @@ export default function ChoosePlayer() {
   const setCurrentPlayer = useGameStore((state) => state.setCurrentPlayer);
   const player = useGameStore((state) => state.player);
 
+  const p1 = useGameStore((state)=>state.p1)
+  const p2 = useGameStore((state)=>state.p2)
+
+
   const setPlayerSymbols = useGameStore((state) => state.setPlayerSymbols);
   const setPlayerNames = useGameStore((state) => state.setPlayerNames); // שליפת פונקציית עדכון שמות מה-store
   const myName = useGameStore((state) => state.myName); // שליפת השם הנוכחי מה-store
   const opponentName = useGameStore((state) => state.opponentName);
 
-
-  // const [player, setPlayer] = useState("");
 
   const chooseClick = (value) => {
     setPlayer(value);

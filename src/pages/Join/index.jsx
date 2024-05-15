@@ -28,6 +28,10 @@ export default function Join() {
 
   const handleJoin = () => {
     socket.emit('join-game', { roomId: roomCode });
+    socket.on('game-start', ({ roomId: roomCode })=>{
+      navigate('/waiting' , )
+      // TODO - send to waiting page //////
+    });
     console.log(roomCode);
   };
 

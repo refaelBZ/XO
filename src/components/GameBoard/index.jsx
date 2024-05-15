@@ -6,7 +6,7 @@ import WhiteBoard from "../WhiteBoard";
 import { useGameStore } from '../../store';
 import isWin from '../../functions/isWin'
 
-export default function Game_board() {
+export default function GameBoard() {
 
   const winner = useGameStore((state) => state.winner)
   const setWinner = useGameStore((state) => state.setWinner)
@@ -30,11 +30,11 @@ export default function Game_board() {
 
 
   const handleClick = (rowIndex, squareIndex) => {
-    
-    if(isCompu){
-      isWin
+    console.log({rowIndex, squareIndex});
+    // if(isCompu){
+    //   isWin
       
-    }
+    // }
 
     if (winner) return;
 

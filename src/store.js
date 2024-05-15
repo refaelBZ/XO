@@ -33,9 +33,9 @@ export const useGameStore = create((set) => ({
 
 
 
-  setp1: (value)=>set(state=>({p1:{...state.p1 ,...value}})),
+  // setp1: (value)=>set(state=>({p1:{...state.p1 ,...value}})),
   
-  setp1: (value)=>set(state=>({p2:{...state.p2 ,...value}})),
+  // setp2: (value)=>set(state=>({p2:{...state.p2 ,...value}})),
 
   //בחירת שחקן
   setPlayer: (player) => {
