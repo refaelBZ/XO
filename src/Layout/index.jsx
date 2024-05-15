@@ -8,13 +8,18 @@ import Refael from "../test/Refael";
 import ChoosePlayer from "../pages/ChoosePlayer";
 import Waiting from "../pages/Waiting";
 import BoardWithPlayers from "../pages/BoardWithPlayers";
+import { useState } from "react";
 
 export default function Layout() {
+
+  const [roomCode, setRoomCode] = useState('');
+
+
   return (
     <Routes>
       <Route path="/" element={<Welcome />} />
       <Route path="/welcome" element={<Welcome />} />
-      <Route path="/menu" element={<Menu />} />
+      <Route path="/menu" element={<Menu setRoomCode={setRoomCode}/>} />
       <Route path="/waiting" element={<Waiting />} />
       <Route path="/join" element={<Join />} />
       <Route path="/board" element={<BoardWithPlayers />} />
